@@ -2,6 +2,15 @@ console.log('Starting notes.js');
 
 const files = require('fs');
 
+
+var fetchNotes = () =>{
+
+};
+
+var saveNotes = (notes) => {
+
+};
+
 var addNote = (title, body) => {
  var notes = [];
  var note = {
