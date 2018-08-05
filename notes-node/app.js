@@ -31,11 +31,12 @@ if (commd === 'add'){
 }else if (commd === 'read'){
   notes.getNote(argv.title);
 }else if (commd === 'remove'){
-   notes.removeIt(argv.title);
+   var noteRem = notes.removeIt(argv.title);
+   var message = noteRem ? 'Note Removed' : 'Note not found';
+   console.log(message);
 }else{
   console.log('Command not recognized');
 };
-
 
 
 
