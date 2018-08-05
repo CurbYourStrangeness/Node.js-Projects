@@ -15,7 +15,17 @@ console.log('Yargs: ', argv);
 
 
 if (commd === 'add'){
-  notes.addNote(argv.title, argv.body);
+  var note = notes.addNote(argv.title, argv.body);
+  if(note){
+    console.log('Note created');
+    console.log('--');
+    console.log('Title: ${note.title}');
+    console.log('Body: ${note.body}');
+
+
+  }else{
+    console.log('Error. Duplicate(s) exist');
+  }
 }else if (commd === 'list'){
   notes.getAll();
 }else if (commd === 'read'){
