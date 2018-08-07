@@ -18,18 +18,21 @@ if (commd === 'add'){
   var note = notes.addNote(argv.title, argv.body);
   if(note){
     console.log('Note created');
-    console.log('--');
-    console.log('Title: ${note.title}');
-    console.log('Body: ${note.body}');
-
-
+    notes.logIt(note);
   }else{
     console.log('Error. Duplicate(s) exist');
   }
 }else if (commd === 'list'){
   notes.getAll();
 }else if (commd === 'read'){
-  notes.getNote(argv.title);
+  var note = notes.getNote(argv.title);
+
+  if (note){
+    console.log('Found note');
+    notes.logIt(note);
+  }else{
+    console.log('Note not found');
+  }
 }else if (commd === 'remove'){
    var noteRem = notes.removeIt(argv.title);
    var message = noteRem ? 'Note Removed' : 'Note not found';

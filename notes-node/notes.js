@@ -36,7 +36,9 @@ var getAll = () => {
 };
 
 var getNote = (title) =>{
-  console.log('Reading');
+  var notes = fetchNotes();
+  var filtered0 = notes.filter((note) => note.title === title);
+  return filtered0[0];
 };
 
 var removeIt = (title) => {
@@ -49,9 +51,16 @@ var removeIt = (title) => {
   //save new notes array
 };
 
+var logIt = (note) => {
+  console.log('--');
+  console.log('Title: ${note.title}');
+  console.log('Body: ${note.body}');
+};
+
 module.exports = {
   addNote,
   getAll,
   getNote,
-  removeIt
+  removeIt,
+  logIt
 };
