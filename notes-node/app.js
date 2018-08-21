@@ -23,7 +23,7 @@ if (commd === 'add'){
     console.log('Error. Duplicate(s) exist');
   }
 }else if (commd === 'list'){
-  notes.getAll();
+  console.log(notes.getAll());
 }else if (commd === 'read'){
   var note = notes.getNote(argv.title);
 
