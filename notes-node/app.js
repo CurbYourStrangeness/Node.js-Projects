@@ -35,17 +35,3 @@ if (commd === 'add'){
 }else{
   console.log('Command not recognized');
 };
-
-
-
-
-//console.log(_.isString(true));
-//console.log(_.isString('Jaqueline'));
-//var filteredArray = _.uniq(['Lady'])
-//console.log(filteredArray);
-
-//console.log(notes.add(9.-2));
-
-//var user = os.userInfo();
-
-//fs.appendFileSync('greetings.txt', 'Hello ${user.username}!');
